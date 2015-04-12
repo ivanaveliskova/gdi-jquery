@@ -41,6 +41,16 @@
           <p><span class="blue">Slides &amp; files</span>: http://ahoef.co/jquery</p> 
         </section> -->
         <!-- Opening slide -->
+
+<!--         <section>
+          <ul>
+            <li>Wifi &mdash; PromptWorks-Guest</li>
+            <li>Password &mdash; handcrafted</li>
+            <li>Slides &mdash; ahoef.co/jquery/slides</li>
+            <li>Demo Files &mdash; ahoef.co/jquery/demo-files.zip</li>
+          </ul>
+        </section> -->
+
         <section>
           <img src="images/gdi_logo_badge.png" style="width: 400px;">
           <h3>Intro to jQuery</h3>
@@ -169,7 +179,7 @@ greet();
           <p class="blue">Functions</p>
 <pre><code>
 function add(number1, number2){
-  console.log("Total: " + number1 + number2);
+  console.log("Total: " + (number1 + number2));
 }
 
 add(2, 3);
@@ -476,7 +486,7 @@ for (var i = 0; i< elems.length; i++) {
           <br>
           <pre><code class="html">&lt;a href="http://www.google.com" style="color: green;"&gt;Google&lt;/a&gt;</pre></code>
           <br>
-          <p><span class="blue left">$('a').html();</span> <span>"Google"</span></p>
+          <p><span class="blue left">$('a').text();</span> <span>"Google"</span></p>
           <p><span class="blue left">$('a').attr('href');</span> <span>"http://www.google.com"</span></p>
           <p><span class="blue left">$('a').css('color');</span> <span>"green"</span></p>
           <!-- <p class="fragment" style="clear: both;">Read some properties of the link to Yasmine's email.</p> -->
@@ -484,9 +494,9 @@ for (var i = 0; i< elems.length; i++) {
         <section>
           <h3>Changing elements &amp; their properties</h3>
           <pre><code class="html">&lt;a href="http://www.google.com" style="color: green;"&gt;Google&lt;/a&gt;</pre></code>
-          <p class="blue left">$('a').html('Yahoo!');</p>
+          <p class="blue left">$('a').text('Yahoo!');</p>
           <p class="blue left">$('a').attr('href', 'http://www.yahoo.com');</p>
-          <p class="blue left">$('a').css({'color': 'purple'});</p>
+          <p class="blue left">$('a').css({'color': 'purple', 'text-decoration': 'underline'});</p>
         </section>
 
         <section>
@@ -498,7 +508,7 @@ for (var i = 0; i< elems.length; i++) {
             <li class="fragment">Hide the navigation</li>
             <li class="fragment">Add the class "spin" to the main page heading</li>
             <li class="fragment">Change the color of the links in the opening paragraph only</li>
-            <li class="fragment">Photobomb all the gallery images with photos of Ryan Gosling!</li>
+            <li class="fragment">Photobomb all the gallery images with photos of your favorite celeb!</li>
           </ul>
         </section>
 
@@ -524,7 +534,7 @@ if (isMobile) {
        <section>
           <h3>Why not just css/html?</h3>
 
-          <pre><code>&lt;img class="sale-img" src="/sale.png"&gt;</code>
+          <pre><code>&lt;img class="sale-img" src="images/sale.png"&gt;</code>
 
 <code class="js">
 var currentTime = new Date().getTime();
@@ -565,9 +575,9 @@ if (currentTime > 1428595627) {
 });</code></pre>
 <br>
 <p class="fragment">To be more efficient, cache a variable for $(this):</p>
-          <pre><code class="javascript fragment">var $this = $(this);
-
+          <pre><code class="javascript fragment">
 $('ul li').each(function() {
+  var $this = $(this);
   $this.append('!');
 });</code></pre>
         </section>
@@ -576,14 +586,14 @@ $('ul li').each(function() {
           <h3>Exercise!</h3>
           <br>
 
-          <p>In demo-files/index.html, use .each() to attribute each listed quote to Ryan Gosling!</p>
+          <p>In demo-files/index.html, use .each() to credit each listed quote to Ryan Gosling!</p>
 
           <ul>
             <li class="blue" >"You just tell me what you want, and I'm gonna be that for you." &mdash;Ryan Gosling</li>
           </ul>
         <br>
         <br>
-          <p>Challenge: Insert attribute at the beginning of each quote</p>
+          <p>Challenge: Give credit at the beginning of each quote</p>
           <ul>
             <li class="blue">According to Ryan Gosling, "You just tell me what you want, and I'm gonna be that for you."</li>
           </ul>
@@ -765,7 +775,7 @@ $('button').on('click', function() {
           <h2>Thank You!</h2>
           <br>
           <h4 class="center">Survey</h4>
-          <p class="center"><a href="http://bit.ly/gdi-jquery">http://bit.ly/gdi-jquery</a></p>
+          <p class="center"><a href="http://bit.ly/gdi-jquery">http://bit.ly/gdi-intro-jquery</a></p>
           <br>
           <h4 class="center">Get in touch!</h4>
           <p class="center"><a href="http://twitter.com/ahoefinger">@ahoefinger</a></p>
