@@ -1,0 +1,102 @@
+<script>
+
+// your code goes here
+// Testing Code 1
+var name = "Ivana";
+var greeting = "Hey there, " + name;
+console.log(greeting);
+
+// Creating Different Data Types
+
+var myString = "This is a string!";
+var myInteger = 1;
+var myBoolean = true;
+var myArray = ["string", 1, myString, true];
+var myObject = {
+  name: "Pamela",
+  adjective: "Cool",
+  roles: ["hacker", "teacher", "coder"]
+};
+
+// console.log(typeof(myString));
+// console.log(typeof(myInteger));
+// console.log(typeof(myBoolean));
+// console.log(typeof(myArray)); // This will actually return an object. An array is just another class, and you can instantiate objects of type Array, but they're still treated as objects.
+// console.log(Array.isArray(myArray)); // This will return true, if this is actually an array
+// console.log(typeof(myObject));
+
+// Testing functions
+
+var newName = "Ivana";
+
+function greet() {
+  var newName = "Joey";
+  console.log("Hey there, " + name);
+
+  // What happens if I console.log(newName) here?
+}
+
+greet();
+
+// What happens if I console.log(newName) here? 
+
+function add(number1, number2){
+  console.log("Total: " + (number1 + number2));
+}
+
+add(2, 3);
+add(1000, 30000);
+
+var name = "Ivana";
+function sayHelloTo(name){
+  console.log("Hello, " + name + "!");
+}
+sayHelloTo("Molly");
+sayHelloTo();
+sayHelloTo(name);
+
+
+// Conditionals
+
+var total = 10;
+
+if (total >= 100) {
+  console.log("Total is greater than or equal to 100");
+} else {
+  console.log("Total is less than 100");
+}
+
+// Looping
+
+var favoriteThings = ["Puppies", "Doctor Who", "Settlers of Catan"];
+for(var i = 0; i < favoriteThings.length; i++) {
+  console.log((i + 1) + ". " + favoriteThings[i]);
+}
+
+var i = 0;
+while(i < 10) {
+  console.log("The current number is: " + i);
+  i++;
+}
+
+// Looping and Conditionals
+// FizzBuzz Test!
+
+// What would happen if I changed the order of the conditionals?
+
+for(var i = 1; i <= 100; i++) {
+  if ((i % 3) === 0 && (i % 5) === 0) {
+    console.log("FizzBuzz");
+  } else if ((i % 3) === 0) {
+    console.log("Fizz");
+  } else if (( i % 5) === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
+}
+
+// Traversing the DOM won't be covered here since there is nothing to hook onto in this HTML document.
+
+
+</script>

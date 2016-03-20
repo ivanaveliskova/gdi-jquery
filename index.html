@@ -112,7 +112,7 @@
 var greeting = "Hey there, " + name;
 
 console.log(greeting);</code></pre>
-            <p class="fragment">Open up the console in your browser to test this out!</p>
+            <p class="fragment">Open up the demo-files/js-review in your browser and text editor to test this out!</p>
             </div>
           </section>
 
@@ -128,7 +128,7 @@ console.log(greeting);</code></pre>
   name: "Pamela",
   adjective: "Cool",
   roles: ["hacker", "teacher", "coder"]
-}</code></pre>
+};</code></pre>
             </div>
           </section>
 
@@ -159,12 +159,13 @@ greet();</code></pre>
 add(2, 3);
 add(1000, 30000);</code></pre>
 
-              <pre class="fragment"><code class="javascript">var myName = "Ivana";
-function sayHelloTo(yourName){
-  console.log("Hello, " + yourName + "!");
+              <pre class="fragment"><code class="javascript">var name = "Ivana";
+function sayHelloTo(name){
+  console.log("Hello, " + name + "!");
 }
 sayHelloTo("Molly");
-sayHelloTo(myName);</code></pre>
+sayHelloTo();
+sayHelloTo(name);</code></pre>
             </div>
           </section>
 
@@ -195,6 +196,24 @@ for(var i = 0; i < favoriteThings.length; i++) {
 while(i < 10) {
   console.log("The current number is: " + i);
   i++;
+}</code></pre>
+            </div>
+          </section>
+
+          <section>
+            <h3>JavaScript Review</h3>
+            <div class="left-align">
+              <p class="blue">Combining Conditionals and Looping</p>
+              <pre class="fragment"><code class="javascript">for(var i = 1; i <= 100; i++) {
+  if ((i % 3) === 0 && (i % 5) === 0) {
+    console.log("FizzBuzz");
+  } else if ((i % 3) === 0) {
+    console.log("Fizz");
+  } else if (( i % 5) === 0) {
+    console.log("Buzz");
+  } else {
+    console.log(i);
+  }
 }</code></pre>
             </div>
           </section>
@@ -255,6 +274,7 @@ for (var i = 0; i < allImages.length; i++) {
   allImages[i].style.display = "none";
 }
 </code></pre>
+        <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" class="img-small fragment"/>
         </section>
 
         <section>
@@ -262,7 +282,8 @@ for (var i = 0; i < allImages.length; i++) {
           <br>
 
           <p class="blue">To hide images:</p>
-<pre class="fragment"><code class="javascript">$('img').hide();</code></pre>
+          <pre class="fragment"><code class="javascript">$('img').hide();</code></pre>
+          <img src="http://38.media.tumblr.com/tumblr_m0yndiEete1qb30q3.gif" class="fragment">
         </section>
 
         <section>
@@ -283,7 +304,7 @@ for (var i = 0; i < allImages.length; i++) {
                 <li class="fragment">Good for development</li>
               </ul>
             </li>
-            <li class="fragment">Use a content distribution network
+            <li class="fragment">Use a content distribution/delivery network
               <ul>
                 <li class="fragment">User may have it cached, saves on page weight</li>
                 <li class="fragment"><pre><code class="html">&lt;script src="http://code.jquery.com/jquery-2.2.1.js"&gt;&lt;/script&gt;</code></pre></li>
@@ -437,7 +458,7 @@ for (var i = 0; i < allImages.length; i++) {
               <p class="fragment"><span class="blue left">.attr('src')</span><span>&mdash;Retrieves the src attribute for the element</span></p>
               <p class="fragment"><span class="blue left">.css('background-color')</span><span>&mdash;Retrieves the background color of the element</span></p>
               <p class="fragment"><span class="blue left">.append('&lt;p&gt;The end!&lt;p&gt;')</span><span>&mdash;Inserts a 'p' tag after the element</span></p>
-              <p class="fragment"><span class="blue left">.prepend('&lt;h1&gt;Hey!&lt;/h1&gt;')</span><span>&mdash;Inserts an 'h1' tag before the element</span></p>
+              <!-- <p class="fragment"><span class="blue left">.prepend('&lt;h1&gt;Hey!&lt;/h1&gt;')</span><span>&mdash;Inserts an 'h1' tag before the element</span></p> -->
             </div>
           </section>
 
@@ -520,7 +541,7 @@ for (var i = 0; i < allImages.length; i++) {
               <li>Photobomb just the hero image with a photo of your favorite celeb!</li>
             </ul>
 
-            <p>Bonus Challenge! Try to change all the images in the gallery with images of your favorite celeb and replace the text on the overlay!</p>
+            <p><span class="blue">Bonus Challenge!</span> Try to change all the images in the gallery with images of your favorite celeb (or use the images in the images folder) and replace the text on the overlay!</p>
           </div>
         </section>
 
@@ -624,7 +645,7 @@ for(var i = 0; i < listItems.length; i++) {
             <br>
             <ul>
               <li class="fragment">click</li>
-              <li class="fragment">mouseEnter / Leave (hover)</li>
+              <li class="fragment">mouseenter / leave (hover)</li>
               <li class="fragment">submit</li>
               <li class="fragment">scroll / resize</li>
               <li class="fragment">Many more: <a href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a></li>
@@ -672,11 +693,15 @@ for(var i = 0; i < listItems.length; i++) {
         <section>
           <h3>Let's Develop It!</h3>
           <br>
-          <ul class="fragment">
-          <li>Add console logs on mouseEnter/mouseLeave for the hero image</li>
-            <li>Add some text underneath the button when it's clicked</li>
-          </ul>
-          <!-- <p class="fragment"><span class="blue">Bonus Challenge:</span> ...</p> -->
+          <div class="fragment">
+            <ul>
+            <li>Add console logs on mouseenter/mouseleave for the hero image</li>
+              <li>Add some text underneath the button when it's clicked</li>
+            </ul>
+            <br/>
+            <br/>
+            <p><span class="blue">Bonus Challenge:</span> Have the text that appears underneath the button appear when the button is clicked and disappear if the button is clicked again</p>
+          </div>
         </section>
         <section>
           <h3>Document Readiness</h3>
@@ -686,9 +711,7 @@ for(var i = 0; i < listItems.length; i++) {
           <pre class="fragment"><code class="javascript">$(document).ready(function() {
   // Handler for .ready() called.
 });</code></pre>
-<pre class="fragment"><code class="javascript">$(function() {
-  // Handler for .ready() called.
-});</code></pre>
+          <p class="fragment">Or you can put you javascript at the bottom of the document</p>
         </section>
 
         <section>
@@ -723,10 +746,13 @@ for(var i = 0; i < listItems.length; i++) {
           </section>
         </section>
         <section>
-          <h3>Try it</h3>
-          <p>When clicking a profile photo, hide, show, or animate the contact info.</p>
-          <pre class="fragment"><code class="javascript">$('.profile-pic').on('click',function(){
-  $(this).siblings('.contact').slideToggle('slow');
+          <h3>Try it together!</h3>
+          <p>When hovering a gallery image: hide, show, or animate the overlay info.</p>
+          <pre class="fragment"><code class="javascript">$('.gallery li').each(function() {
+  var $thisImage = $(this);
+  $thisImage.on('mouseenter mouseleave', function() {
+    $thisImage.find('.overlay').fadeToggle('fast');
+  });
 });</code></pre>
           <ul>
             <li class="fragment">Be mindful of what a user will see without javascript</li>
