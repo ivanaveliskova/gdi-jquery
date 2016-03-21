@@ -74,6 +74,8 @@
 // });
 
 
+
+
 //////////////////////////////////////////////////////////
 // PRACTICE 3:                                          //
 // Add credit at the end of each quote.                 //
@@ -110,10 +112,13 @@
 
 
 
+
+
 //////////////////////////////////////////////////////////
 // PRACTICE 4:                                          //
 // Add console.logs on hover for hero image             //
 // Add some text on button click                        //
+// Toggle the menu on click                             //
 //////////////////////////////////////////////////////////
 
 // $('.hero img').on({
@@ -130,6 +135,12 @@
 //     $(this).parent().append('<p>Button was pressed.</p>');
 // });
 
+// $('.menu-icon').on('click', function() {
+//     var $menu = $('.site-nav');
+//     $menu.slideToggle();
+// });
+
+
 //////////////////////////////////////////////////////////////////////
 // Bonus:                                                           //
 // Have the text appear and disappear when the button is clicked    //
@@ -144,3 +155,9 @@
 //         $this.parent().append('<p>Button was pressed.</p>');
 //     }
 // });
+
+
+
+
+
+
