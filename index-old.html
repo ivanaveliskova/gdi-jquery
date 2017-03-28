@@ -1,89 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>girldevelopit-reveal.js - The GDI HTML Presentation Framework</title>
+        <title>Intro to jQuery ~ Girl Develop IT</title>
 
-		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
-		<meta name="author" content="Girl Develop It">
+        <meta name="description" content="">
+        <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
-    <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+        <link rel="stylesheet" href="reveal/css/theme/gdisunny.css" id="theme">
 
-		<!-- For syntax highlighting -->
-        <link rel="stylesheet" href="lib/css/zenburn.css">
-		<!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
-		<!-- dark editor<link rel="stylesheet" href="lib/css/dark.css">-->
+        <!-- For syntax highlighting -->
+        <!-- light editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
 
-		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+    <!-- For the slides -->
+    <link rel="stylesheet" href="css/slides.css">
+        <!-- If use the PDF print sheet so students can print slides-->
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+        <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
-		<!-- If use the PDF print sheet so students can print slides-->
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+    <body>
 
-	<body>
+        <div class="reveal">
 
-		<div class="reveal">
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+              <!-- Prologue slide -->
+<!--         <section>
+          <p><span class="blue">Wifi</span>: IndyHall 2.4ghz / coworking</p>
+          <p><span class="blue">Slides &amp; files</span>: http://ahoef.co/jquery</p>
+        </section> -->
+        <!-- Opening slide -->
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-        <!-- Opening -->
-				<section>
-            <img src="img/circle-gdi-logo.png" alt="GDI Logo"/>
-  					<h3>Intro to jQuery</h3>
-				</section>
+<!--         <section>
+          <ul>
+            <li>Wifi &mdash; PromptWorks-Guest</li>
+            <li>Password &mdash; handcrafted</li>
+            <li>Slides &mdash; ahoef.co/jquery/slides</li>
+            <li>Demo Files &mdash; ahoef.co/jquery/demo-files.zip</li>
+          </ul>
+        </section> -->
+
+        <!-- <section>
+          <h3>Welcome!</h3>
+
+          <p><span class="blue">Wifi</span> &mdash; First Round Capital Guest</p>
+          <p><span class="blue">Password</span> (all lowercase) &mdash; frclovesphilly</p>
+          <p><span class="blue">Slides</span> &mdash; ivanaveliskova.com/gdi-jquery</p>
+          <p><span class="blue">Demo Files</span> &mdash; <a href="http://ivanaveliskova.com/gdi-jquery/demo-files.zip">ivanaveliskova.com/gdi-jquery/demo-files.zip</a></p>
+        </section> -->
+
+        <section>
+          <img src="images/gdi_logo_badge.png" style="width: 400px;">
+          <h3>Intro to jQuery</h3>
+        </section>
 
         <!-- Welcome-->
         <section>
-            <h3>Welcome!</h3>
-            <div class="left-align">
-                <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-                <p><a href="https://www.girldevelopit.com/code-of-conduct">Our code of conduct</a></p>
-                <p>Some "rules"</p>
-                <ul>
-                    <li>We are here for you!</li>
-                    <li>Every question is important!</li>
-                    <li>Help each other</li>
-                    <li>Have fun</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h3>GDI Philly is now on Slack!</h3>
-            <div class="left-align">
-                <p>Slack is a free, chat and messaging system available as either a web or native application for your desktop or mobile device. All our welcome to join our Slack team, but we need to add you! For an invitation, <a href="http://goo.gl/forms/Qk1hqLxXtU" target="_blank">sign up here</a>.</p>
-                <h4><br />Join #frontend-classes to slack about this class!</h4>
-            </div>
+          <h3>Welcome!</h3>
+          <div class="left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class="blue">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+          </div>
         </section>
 
         <section>
           <h3>Welcome!</h2>
-          <ul>
+          <ul class="fragment">
             <li>This class will be a combo of lecture + exercises</li>
-            <li>It is 4 hours long, with a 30 minute break in the middle</li>
+            <li>It is 4 hours long, with a 30 minute break</li>
             <li>Agenda
                 <ul>
                   <li>Introductions</li>
@@ -105,7 +106,7 @@
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
-            <li>Who is your favorite breakfast food?</li>
+            <li>Who is your favorite TV/movie character?</li>
           </ul>
           </div>
         </section>
@@ -115,13 +116,12 @@
           <h3>JavaScript Review</h3>
           <div class="left-align">
           <p class="blue">Variables</p>
-          <pre><code class="javascript">var name = "Ivana";
+          <pre class="fragment"><code class="javascript">var name = "Ivana";
 
 var greeting = "Hey there, " + name;
 
 console.log(greeting);</code></pre>
-          <p class="fragment">Open up the demo-files/js-review.html in your browser and text editor to test this out!</p>
-          <p class="fragment"><small>Don't forget to open up the console!</small></p>
+          <p class="fragment">Open up the demo-files/js-review in your browser and text editor to test this out!</p>
           </div>
         </section>
 
@@ -134,10 +134,10 @@ console.log(greeting);</code></pre>
             <pre class="fragment"><code class="javascript">var myBoolean = true;</code></pre>
             <pre class="fragment"><code class="javascript">var myArray = ["string", 1, myVar, true];</code></pre>
             <pre class="fragment"><code class="javascript">var myObject = {
-  name: "Pamela",
-  adjective: "Cool",
-  age: 25,
-  roles: ["hacker", "teacher", "coder"]
+name: "Pamela",
+adjective: "Cool",
+age: 25,
+roles: ["hacker", "teacher", "coder"]
 };</code></pre>
           </div>
         </section>
@@ -149,8 +149,8 @@ console.log(greeting);</code></pre>
             <pre class="fragment"><code class="javascript">var name = "Ivana";
 
 function greet() {
-  var name = "Joey";
-  console.log("Hey there, " + name);
+var name = "Joey";
+console.log("Hey there, " + name);
 }
 
 greet();</code></pre>
@@ -163,7 +163,7 @@ greet();</code></pre>
           <div class="left-align">
             <p class="blue">Functions</p>
             <pre class="fragment"><code class="javascript">function add(number1, number2){
-  console.log("Total: " + (number1 + number2));
+console.log("Total: " + (number1 + number2));
 }
 
 add(2, 3);
@@ -171,11 +171,11 @@ add(1000, 30000);</code></pre>
 
             <pre class="fragment"><code class="javascript">var name = "Ivana";
 function sayHelloTo(name){
-  console.log("Hello, " + name + "!");
+console.log("Hello, " + name + "!");
 }
-sayHelloTo("Maggie");
-sayHelloTo(name);
-sayHelloTo();</code></pre>
+sayHelloTo("Molly");
+sayHelloTo();
+sayHelloTo(name);</code></pre>
           </div>
         </section>
 
@@ -186,9 +186,9 @@ sayHelloTo();</code></pre>
             <pre class="fragment"><code class="javascript">var total = 10;
 
 if (total >= 100) {
-  console.log("Total is greater than or equal to 100");
+console.log("Total is greater than or equal to 100");
 } else {
-  console.log("Total is less than 100");
+console.log("Total is less than 100");
 }</code></pre>
           </div>
         </section>
@@ -198,16 +198,14 @@ if (total >= 100) {
           <div class="left-align">
             <p class="blue">Looping</p>
             <pre class="fragment"><code class="javascript">var favoriteThings = ["Puppies", "Doctor Who", "Settlers of Catan"];
-
 for(var i = 0; i < favoriteThings.length; i++) {
-  console.log((i + 1) + ". " + favoriteThings[i]);
+console.log((i + 1) + ". " + favoriteThings[i]);
 }</code></pre>
 
             <pre class="fragment"><code class="javascript">var i = 0;
-
 while(i < 10) {
-  console.log("The current number is: " + i);
-  i++; // Don't forget to increment i or you will get stuck in an infinite loop!
+console.log("The current number is: " + i);
+i++;
 }</code></pre>
           </div>
         </section>
@@ -215,56 +213,39 @@ while(i < 10) {
         <section>
           <h3>JavaScript Review</h3>
           <div class="left-align">
-            <p class="blue">Combining Conditionals and Looping (<a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a>)</p>
+            <p class="blue">Combining Conditionals and Looping</p>
             <pre class="fragment"><code class="javascript">for(var i = 1; i <= 100; i++) {
-  var print = '';
-
-  if ((i % 3) === 0) {
-    print += 'Fizz';
-  }
-
-  if ((i % 5) === 0) {
-    print += 'Buzz';
-  }
-
-  if(print === '') {
-    print = i;
-  }
-
-  console.log(print);
+if ((i % 3) === 0 && (i % 5) === 0) {
+  console.log("FizzBuzz");
+} else if ((i % 3) === 0) {
+  console.log("Fizz");
+} else if (( i % 5) === 0) {
+  console.log("Buzz");
+} else {
+  console.log(i);
+}
 }</code></pre>
-            <p class="fragment"><small>There is no single 'right' way of solving this. This is just one solution. When you have some time try to figure out a different solution!</small></p>
           </div>
         </section>
 
-        <section data-slide=''>
+        <section>
           <h3>JavaScript Review</h3>
           <div class="left-align">
             <p class="blue">Traversing the DOM</p>
-            <pre class="fragment"><code class="javascript">document.getElementById('table-of-contents');
-// Finds an element in the DOM by ID
-// will return first one that matches (there should only be 1)</code></pre>
-            <pre class="fragment"><code class="javascript">document.getElementsByClassName('past');
-// Finds elements in the DOM by class
-// will return an array even if there is only one match</code></pre>
-            <pre class="fragment"><code class="javascript">document.getElementsByTagName('body');
-// Finds elements in the DOM by tag
-// will return an array even if there is only one match</code></pre>
-            <pre class="fragment"><code class="javascript">document.querySelectorAll('[data-slide]');
-// Finds elements in the DOM by any selector that you can use in CSS
-// will return an array even if there is only one match</code></pre>
-            <pre class="fragment"><code class="javascript">document.querySelector('[data-slide]');
-// Finds an element in the DOM by any selector that you can use in CSS
-// will return only the first one that matches</code></pre>
+            <pre class="fragment"><code class="javascript">document.getElementById('presentation');</code></pre>
+            <pre class="fragment"><code class="javascript">document.getElementsByClassName('slide');</code></pre>
+            <pre class="fragment"><code class="javascript">document.getElementsByTagName('body');</code></pre>
+            <pre class="fragment"><code class="javascript">document.querySelectorAll('a');</code></pre>
+            <pre class="fragment"><code class="javascript">document.querySelector('img');</code></pre>
           </div>
         </section>
 
         <!-- End Review -->
 
-        <section data-slide=''>
+        <section>
           <p class="fragment">We made it through the JS review!</p>
           <br>
-          <img src="https://media.tenor.co/images/f47be42ba4c7ed7dab1645267cabb442/tenor.gif" class="img-med fragment">
+          <img src="http://55.media.tumblr.com/tumblr_m8fdwhJhd61r9yyno.gif" class="img-med fragment">
           <br>
           <br>
           <p class="blue fragment">Any questions?</p>
@@ -285,8 +266,8 @@ while(i < 10) {
         <section>
           <h3>The jQuery base library includes...</h3>
           <ul class="fragment">
-            <li>DOM manipulation</li>
             <li>Data manipulation</li>
+            <li>DOM manipulation</li>
             <li>Events</li>
             <li>Effects and animation</li>
             <li>AJAX</li>
@@ -306,13 +287,13 @@ for (var i = 0; i < allImages.length; i++) {
         <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" class="img-small fragment"/>
         </section>
 
-        <section id="hideImages">
+        <section>
           <h3>Example: jQuery</h3>
           <br>
 
           <p class="blue">To hide images:</p>
           <pre class="fragment"><code class="javascript">$('img').hide();</code></pre>
-          <img src="https://media.giphy.com/media/3o7qDEq2bMbcbPRQ2c/giphy.gif " class="fragment">
+          <img src="http://38.media.tumblr.com/tumblr_m0yndiEete1qb30q3.gif" class="fragment">
         </section>
 
         <section>
@@ -328,16 +309,17 @@ for (var i = 0; i < allImages.length; i++) {
           <ul>
             <li class="fragment">Download and serve
               <ul>
-                <li>Allows you to work locally without an internet connection</li>
-                <li>May be faster than a CDN (content delivery network)</li>
-                <li>Good for development</li>
+                <li class="fragment">Allows you to work locally without an internet connection</li>
+                <li class="fragment">May be faster than a cdn</li>
+                <li class="fragment">Good for development</li>
               </ul>
             </li>
             <li class="fragment">Use a content distribution/delivery network
               <ul>
-                <li>User may have it cached, saves on page weight</li>
-                <li><pre><code class="html">&lt;script src="http://code.jquery.com/jquery-2.2.1.js"&gt;&lt;/script&gt;</code></pre></li>
-                <li>Good for production</li>
+                <li class="fragment">User may have it cached, saves on page weight</li>
+                <li class="fragment"><pre><code class="html">&lt;script src="http://code.jquery.com/jquery-2.2.1.js"&gt;&lt;/script&gt;</code></pre></li>
+                <!-- <li class="fragment"><pre><code>&lt;script src="http://code.jquery.com/jquery-1.12.0.js"&gt;&lt;/script&gt;</code></pre></li> -->
+                <li class="fragment">Good for production</li>
               </ul>
             </li>
           </ul>
@@ -349,8 +331,7 @@ for (var i = 0; i < allImages.length; i++) {
             <li>Open up demo-files/index.html in your text editor &amp; in your browser</li>
             <li>Include the jQuery library as a source attribute in a script tag before the closing body tag</li>
             <li>Under that script tag, create a new set of script tags, where your code will live</li>
-            <li>Use the jQuery command from a few <a href="#/hideImages">slides</a> back to hide all of the images on the page</li>
-            <li>Once you finish that, create a new javascript file in the same directory and link it to your html page and move the hide image code in there to make sure it works</li>
+            <li>Use the jQuery command from a few slides back to hide all of the images on the page</li>
           </ul>
         </section>
 
@@ -370,30 +351,27 @@ for (var i = 0; i < allImages.length; i++) {
           </div>
         </section>
 
-        <section id="selectorsMethods">
+        <section id="anatomy2" class="twoColumns">
+          <h3>Anatomy of a jQuery call</h3>
+          <pre><code class="javascript">$('img').hide();</code></pre>
+          <p class="fragment"><span class="blue left">$()</span> <span>Global jQuery function. Alternately "jQuery()" Used to trigger all jQuery functionality.</span></p>
+          <p class="fragment"><span class="blue left">'img'</span> <span>Argument being passed into the global jQuery function. Also accepts variables and html strings. Returns a jQuery collection/object</span></p>
+          <p class="fragment"><span class="blue left">.hide()</span> <span>jQuery method to hide the element by adding a style of 'display: none;' </span></p>
+          <p class="fragment"><span class="blue left">;</span> <span>Syntax to conclude a statement</span></p>
+        </section>
+        <section >
           <h3>Anatomy of a jQuery call</h3>
           <br>
           <pre><code class="javascript">$('img').hide();</code></pre>
           <br>
          <ul>
-            <li class="fragment">$('img') is a selector <a href="#/selectors">.</a></li>
-            <li class="fragment">.hide() is a method <a href="#/methods">.</a></li>
+            <li class="fragment">$('img') is a selector</li>
+            <li class="fragment">.hide() is a method</li>
           </ul>
         </section>
-
-        <section id="anatomy2" class="twoColumns">
-          <h3>Anatomy of a jQuery call</h3>
-          <pre><code class="javascript">$('img').hide();</code></pre>
-          <p class="fragment"><span class="blue left">$()</span> <span>Global jQuery function. Alternately "jQuery()". Used to trigger all jQuery functionality.</span></p>
-          <p class="fragment"><span class="blue left">'img'</span> <span>Argument being passed into the global jQuery function. Also accepts variables and html strings. Returns a jQuery collection/object</span></p>
-          <p class="fragment"><span class="blue left">.hide()</span> <span>jQuery method to hide the element by adding a style of 'display: none;' </span></p>
-          <p class="fragment"><span class="blue left">;</span> <span>Syntax to conclude a statement</span></p>
-        </section>
-
         <section id="selectors" class="twoColumns">
-          <h3><a href="#/selectorsMethods">Selectors</a></h3>
-          <p class="left-align">All <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank">CSS selectors</a> are valid</p>
-          <p class="fragment">Some Examples:</p>
+          <h3>Selectors</h3>
+          <p class="left-align">All <a href="http://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank">CSS selectors</a> are valid, plus some extras</p>
           <p class="fragment"><span class="blue left">a</span> <span>all anchors</span></p>
           <p class="fragment"><span class="blue left">.blue</span> <span>elements with the class "blue"</span></p>
           <p class="fragment"><span class="blue left">p:eq(2)</span> <span>the third paragraph (zero-based count)</span></p>
@@ -403,8 +381,8 @@ for (var i = 0; i < allImages.length; i++) {
           <p class="fragment center"><a href="http://api.jquery.com/category/selectors/">http://api.jquery.com/category/selectors/</a></p>
         </section>
 
-        <section id="methods">
-          <h3><a href="#/selectorsMethods">Methods</a></h3>
+        <section>
+          <h3>Methods</h3>
 
           <p class="fragment">There are many jQuery methods- like tools in a toolkit!</p>
           <br>
@@ -443,7 +421,7 @@ for (var i = 0; i < allImages.length; i++) {
 
         <!-- is each one a getter or setter? -->
 
-        <section class="twoColumns">
+        <section id="anatomy2" class="twoColumns">
           <h3>Methods to Memorize:</h3>
           <h4>No arguments</h4>
           <p class="fragment"><span class="blue left">.hide()</span> <span>Adds an inline style of "display: none" to the element</span></p>
@@ -451,33 +429,32 @@ for (var i = 0; i < allImages.length; i++) {
           <p class="fragment"><span class="blue left">.remove()</span> <span>Deletes element from the DOM</span></p>
           <p class="fragment"><span class="blue left">.html()</span> <span>Retrieves html within the selected element</span></p>
           <p class="fragment"><span class="blue left">.text()</span> <span>Retrieves only the text within the selected element</span></p>
+          <p class="fragment"><span class="blue left">.parent()</span> <span>Retrieves the element's direct parent</span></p>
         </section>
 
 
-        <section class="twoColumns">
-          <h3 class="hide-me">Methods to Memorize:</h3>
+        <section id="anatomy2" class="twoColumns">
+          <h3>Methods to Memorize:</h3>
           <h4>No arguments</h4>
-          <p class="fragment"><span class="blue left">.parent()</span> <span>Retrieves the element's direct parent</span></p>
           <p class="fragment"><span class="blue left">.children()</span> <span>Retrieves all direct children of the element</span></p>
           <p class="fragment"><span class="blue left">.next()</span> <span>Retrieves the next single element at the same level in the DOM tree</span></p>
           <p class="fragment"><span class="blue left">.width()</span> <span>Returns the width of element (in px)</span></p>
           <p class="fragment"><span class="blue left">.height()</span> <span>Returns height of element (in px)</span></p>
-          <p class="fragment"><span class="blue left">.fadeOut()</span> <span>Gradually decreases opacity of element and then add a "display: none"</span></p>
-          <p class="fragment"><span class="blue left">.fadeIn()</span> <span>Will add a "display:block" and then gradually increase opacity of element</span></p>
+          <p class="fragment"><span class="blue left">.fadeOut()</span> <span>Gradually decreases opacity of element</span></p>
+          <p class="fragment"><span class="blue left">.fadeIn()</span> <span>Gradually increases opacity of element</span></p>
         </section>
 
         <!-- chaining -->
         <section>
           <h3>Examples:</h3>
           <br>
-          <pre><code class="javascript">$('.hero img').remove();
+          <pre><code class="fragment javascript">$('.hero img').remove();</code>
 
-$('#banner > span').hide();
+          <code class="fragment javascript">$('#banner > span').hide();</code>
 
-$('#banner').children().hide();
+          <code class="fragment javascript">$('#banner').children().hide();</code>
 
-$('img:not(.hero img)').fadeOut();</code></pre>
-          <p><small>Let's try this in the console of our demo files!</small></p>
+          <code class="fragment javascript">$('img:not(.hero img)').fadeOut();</code></pre>
         </section>
 
 
@@ -485,83 +462,80 @@ $('img:not(.hero img)').fadeOut();</code></pre>
           <h3>Methods to Memorize:</h3>
           <h4>Single argument</h4>
           <div class="left-align">
-            <p class="fragment"><span class="blue left">.addClass('your-classname')</span><span>&ndash;Adds your-classname as a class attribute on to the element</span></p>
-            <p class="fragment"><span class="blue left">.removeClass('your-classname')</span><span>&ndash;Removes your-classname as a class attribute on to the element</span></p>
-            <p class="fragment"><span class="blue left">.attr('src')</span><span>&ndash;Retrieves the src attribute for the element</span></p>
-            <p class="fragment"><span class="blue left">.css('background-color')</span><span>&ndash;Retrieves the background color of the element</span></p>
-            <p class="fragment"><span class="blue left">.append('&lt;p&gt;The end!&lt;p&gt;')</span><span>&ndash;Inserts a 'p' tag inside the element at the end</span></p>
-            <p class="fragment"><span class="blue left">.prepend('&lt;h1&gt;Hey!&lt;/h1&gt;')</span><span>&ndash;Inserts an 'h1' tag inside the element at the beginning</span></p>
+            <p class="fragment"><span class="blue left">.addClass('your-classname')</span><span>&mdash;Adds your-classname as a class attribute on to the element</span></p>
+            <p class="fragment"><span class="blue left">.removeClass('your-classname')</span><span>&mdash;Removes your-classname as a class attribute on to the element</span></p>
+            <p class="fragment"><span class="blue left">.attr('src')</span><span>&mdash;Retrieves the src attribute for the element</span></p>
+            <p class="fragment"><span class="blue left">.css('background-color')</span><span>&mdash;Retrieves the background color of the element</span></p>
+            <p class="fragment"><span class="blue left">.append('&lt;p&gt;The end!&lt;p&gt;')</span><span>&mdash;Inserts a 'p' tag after the element</span></p>
+            <!-- <p class="fragment"><span class="blue left">.prepend('&lt;h1&gt;Hey!&lt;/h1&gt;')</span><span>&mdash;Inserts an 'h1' tag before the element</span></p> -->
           </div>
         </section>
 
         <section>
           <h3>Examples:</h3>
           <br>
-          <pre><code class="javascript">$('.hero img').attr('src');
+          <pre><code class="fragment javascript">$('.hero img').attr('src');</code>
 
-$('#banner > span').addClass('visible');
+          <code class="fragment javascript">$('#banner > span').addClass('visible');</code>
 
-$('#banner').children().append('!');</code></pre>
-          <p><small>Let's try this in the console of our demo files!</small></p>
+          <code class="fragment javascript">$('#banner').children().append('!');</code></pre>
+
         </section>
         <section>
           <h3>Methods to Memorize:</h3>
           <h4>Single argument- Getters turn to Setters</h4>
           <div class="left-align">
-            <p class="fragment"><span class="blue left">.html()</span><span>&ndash;Retrieves html within element</span></p>
-            <p class="fragment"><span class="blue left">.html('&lt;h1&gt;Hey!&lt;/h1&gt;');</span><span>&ndash;Inserts/Replaces html within element</span></p>
+            <p class="fragment"><span class="blue left">.html()</span><span>&mdash;Retrieves html within element</span></p>
+            <p class="fragment"><span class="blue left">.html('&lt;h1&gt;Hey!&lt;/h1&gt;');</span><span>&mdash;Inserts/Replaces html within element</span></p>
             <br>
-            <p class="fragment"><span class="blue left">.text()</span><span>&ndash;Retrieves text within element</span></p>
-            <p class="fragment"><span class="blue left">.text('Hey you!');</span><span>&ndash;Inserts/Replaces text within element</span></p>
+            <p class="fragment"><span class="blue left">.text()</span><span>&mdash;Retrieves text within element</span></p>
+            <p class="fragment"><span class="blue left">.text('Hey you!');</span><span>&mdash;Inserts/Replaces text within element</span></p>
             <br>
-            <p class="fragment"><span class="blue left">.width()</span><span>&ndash;Retrieves the width of element</span></p>
-            <p class="fragment"><span class="blue left">.width(300)</span><span>&ndash;Sets the width of the element to be 300px</span></p>
+            <p class="fragment"><span class="blue left">.width()</span><span>&mdash;Retrieves the width of element</span></p>
+            <p class="fragment"><span class="blue left">.width(300)</span><span>&mdash;Sets the width of the element to be 300px</span></p>
           </div>
         </section>
 
-        <section id="singleCss">
+        <section>
           <h3>Methods to Memorize:</h3>
           <h4>Multiple Arguments</h4>
           <div class="left-align">
             <p class="fragment"><span class="blue left">.attr('src', 'sunset.jpg')</span><span>&mdash;Finds the element's src attribute and changes its value to sunset.jpg</span></p>
             <br>
-            <p class="fragment"><span class="blue left">.css('background-color', 'green')</span><span>&mdash;Finds the elements background color and changes it to green by adding an inline style, which overrides any background-color that might already be there</span> <a href="#/changing">.</a></p>
+            <p class="fragment"><span class="blue left">.css('background-color', 'green')</span><span>&mdash;Finds the elements background color and changes it to green by adding an inline style, which overrides any background-color that might already be there</span></p>
             <br>
             <p class="fragment">Check the <a href="https://api.jquery.com/attr/" target="_blank">jQuery Documentation</a> for info on how each method works!</p>
           </div>
         </section>
 
-        <section id="reading">
+        <section id="reading" class="twoColumns">
           <h3>Reading elements &amp; their properties</h3>
           <br>
           <pre><code class="html">&lt;a href="http://www.google.com" style="color: green;"&gt;Google&lt;/a&gt;</code></pre>
           <br>
           <p class="fragment"><span class="blue left">$('a').text();</span> <span class="fragment">"Google"</span></p>
           <p class="fragment"><span class="blue left">$('a').attr('href');</span> <span class="fragment">"http://www.google.com"</span></p>
-          <p class="fragment">Trick question:</p>
-          <p class="fragment"><span class="blue left">$('a').css('color');</span> <span class="fragment">"rgb(0, 128, 0)"</span></p>
+          <p class="fragment"><span class="blue left">$('a').css('color');</span> <span class="fragment">"green"</span></p>
         </section>
-
-        <section id="changing">
+        <section>
           <h3>Changing elements &amp; their properties</h3>
           <pre><code class="html">&lt;a href="http://www.google.com" style="color: green;"&gt;Google&lt;/a&gt;</code></pre>
           <div class="left-align">
             <p class="blue fragment">$('a').text('Yahoo!');</p>
             <p class="blue fragment">$('a').attr('href', 'http://www.yahoo.com');</p>
-            <p class="blue fragment">$('a').css({'color': 'purple', 'text-decoration': 'underline'}); <a href="#/singleCss">.</a></p>
+            <p class="blue fragment">$('a').css({'color': 'purple', 'text-decoration': 'underline'});</p>
           </div>
           <pre class="fragment"><code class="html">&lt;a href="http://www.yahoo.com" style="color: purple; text-decoration: underline;"&gt;Yahoo!&lt;/a&gt;</code></pre>
           <p class="fragment">Alternatively the javascript code above can be written as:</p>
           <pre class="fragment"><code class="javascript">$('a').text('Yahoo!').attr('href', 'http://www.yahoo.com').css({'color': 'purple', 'text-decoration': 'underline'});</code></pre>
-          <p class="fragment"><small>You can pile on as many methods as you need, as long as you keep track of what is happening. (And potentially can document it.)</small></p>
+          <p class="fragment">You can pile on as many methods as you need, as long as you keep track of what is happening.</p>
         </section>
 
         <section>
           <h3>Let's Develop It!</h3>
           <div class="fragment">
 
-            <p>In your demo-files javascript page, use jQuery to</p>
-            <p><small>Make sure to comment out the code that hid the images!!!</small></p>
+            <p>In demo-files/index.html, use jQuery to</p>
 
             <ul>
               <li>Hide the navigation</li>
@@ -570,28 +544,24 @@ $('#banner').children().append('!');</code></pre>
               <li>Photobomb just the hero image with a photo (or photos) of your favorite celeb!</li>
             </ul>
 
-            <p><span class="blue">Bonus Challenge!</span> Try to replace the text on the images in the gallery! (Start by changing all of the text to be the same and then try to make each line different)</p>
-
-            <p><small>Try not to modify the HTML/CSS directly (such as adding classes so you can select certain elements), try to only make the changes using jQuery</small></p>
+            <p><span class="blue">Bonus Challenge!</span> Try to change all the images in the gallery with images of your favorite celeb (or use the images in the images folder) and replace the text on the overlay!</p>
           </div>
         </section>
 
 <!-- could do all this with html & css -->
         <section>
-          <h3>Why not just HTML/CSS?</h3>
+          <h3>Why not just css/html?</h3>
           <ul>
             <li class="fragment">Sometimes you don't have access to those files</li>
             <li class="fragment">Dynamic Content</li>
             <li class="fragment">Conditionals</li>
           </ul>
 
-          <pre class="fragment"><code class="javascript">var $doc = $('body');
-var style = $doc[0].style;
-
-if ( style.msGrid === '' || style.grid === '' ) {
-  $doc.addClass("supports-grid");
+          <pre class="fragment"><code class="javascript">var isMobile = screen.width <= 640;
+if (isMobile) {
+  $('.desktop-nav').hide();
+  $('.mobile-nav').show();
 }</code></pre>
-          <p class="fragment">And now you can be sure that your browser supports grid! <small>And if you have the latest version of Chrome (57) or FireFox (52) you should be able to get this class to show up in the DOM!</small></p>
         </section>
 
         <section>
@@ -775,234 +745,135 @@ function(){
 );</code></pre>
         </section>
 
-                <section>
-                  <h3>Try it together!</h3>
-                  <p>When hovering a gallery image: hide, show, or animate the overlay info.</p>
-                  <pre class="fragment"><code class="javascript">$('.gallery li').each(function() {
+        <section>
+          <h3>Try it together!</h3>
+          <p>When hovering a gallery image: hide, show, or animate the overlay info.</p>
+          <pre class="fragment"><code class="javascript">$('.gallery li').each(function() {
   var $thisImage = $(this);
   $thisImage.on('mouseenter mouseleave', function() {
     $thisImage.find('.overlay').fadeToggle('fast');
   });
 });</code></pre>
-                  <ul>
-                    <li class="fragment">Be mindful of what a user will see without javascript</li>
-                    <li class="fragment">A lot of these features are possible through CSS3, but jQuery is supported on older browsers</li>
-                    <li class="fragment">Also, jQuery allows you to trigger effects on elements other than the one being interacted with</li>
-                  </ul>
-                </section>
+          <ul>
+            <li class="fragment">Be mindful of what a user will see without javascript</li>
+            <li class="fragment">A lot of these features are possible through CSS3, but jQuery is supported on older browsers</li>
+            <li class="fragment">Also, jQuery allows you to trigger effects on elements other than the one being interacted with</li>
+          </ul>
+        </section>
 
-                <!-- Bonus Content -->
-                <!-- <section>
-                  <h3>jQuery UI &amp; Plugins</h3>
-                  <ul>
-                    <li>jQuery UI offers more advanced interaction methods. It's very well documented, but can be heavy on pageload. <a href="http://jqueryui.com/download/" target="_blank">Only load in pieces you need!</a></li>
-                    <br>
-                    <li>jQuery is open source and widely used, so there are many many plugins available (of varying quality and levels of documentation)
-                    <ul><li>date pickers, slideshows, accordions, much more!</li></ul></li>
-                  </ul>
-                  <br>
-                  <br>
-                  <p class="center"><a href="http://plugins.jquery.com/">http://plugins.jquery.com/</a></p>
-                </section>
-                <section>
-                  <h3>Using Plugins</h3>
-                  <ul>
-                    <li>Download the plugin and associated files from the site or github repo</li>
-                    <li>Copy them into your project folder</li>
-                    <li>In the HTML, reference any associated CSS files</li>
-                    <li>In the HTML, add a script tag for the jQuery plugin itself</li>
-                    <li>In the JavaScript, call the jQuery plugin on your DOM</li>
-                </section>
-                <section>
-                  <h3>Let's Develop It!</h3>
-                  <p>Add a slideshow using <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick.js</a>!</p>
-                  <ul>
-                    <li>Use any of the images in the demo-files image folder, or any of your own images</li>
-                    <li>Test out some of the different display/interaction options Slick has</li>
-                  </ul>
-                </section> -->
-
-
-
-                <section>
-                  <h3>Next Steps</h3>
-                  <ul>
-                    <li class="fragment">Read Up!
-                      <ul>
-                      <li><a href="http://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647">JavaScript &amp; JQuery by Jon Duckett</a></li>
-                      <li><a href="http://api.jquery.com/">JQuery API Documentation</a></li>
-                      </ul>
-                    </li>
-                    <br>
-                    <li class="fragment">Practice!
-                      <ul><li><a href="http://www.codecademy.com/tracks/jquery">Codeacademy jQuery Track</a></li>
-                      <li><a href="http://teamtreehouse.com/library/jquery-basics">Treehouse jQuery Course</a></li>
-                      <li><a href="https://www.codeschool.com/courses/try-jquery">Code School jQuery Course</a></li></ul>
-                    </li>
-                    <br>
-                    <li class="fragment">Build Something!
-                      <ul><li>FAQ list, gallery, quiz, calculator, or whatever else you can cook up!</li></ul>
-                    </li>
-                  </ul>
-                </section>
+        <!-- Bonus Content -->
+        <!-- <section>
+          <h3>jQuery UI &amp; Plugins</h3>
+          <ul>
+            <li>jQuery UI offers more advanced interaction methods. It's very well documented, but can be heavy on pageload. <a href="http://jqueryui.com/download/" target="_blank">Only load in pieces you need!</a></li>
+            <br>
+            <li>jQuery is open source and widely used, so there are many many plugins available (of varying quality and levels of documentation)
+            <ul><li>date pickers, slideshows, accordions, much more!</li></ul></li>
+          </ul>
+          <br>
+          <br>
+          <p class="center"><a href="http://plugins.jquery.com/">http://plugins.jquery.com/</a></p>
+        </section>
+        <section>
+          <h3>Using Plugins</h3>
+          <ul>
+            <li>Download the plugin and associated files from the site or github repo</li>
+            <li>Copy them into your project folder</li>
+            <li>In the HTML, reference any associated CSS files</li>
+            <li>In the HTML, add a script tag for the jQuery plugin itself</li>
+            <li>In the JavaScript, call the jQuery plugin on your DOM</li>
+        </section>
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Add a slideshow using <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick.js</a>!</p>
+          <ul>
+            <li>Use any of the images in the demo-files image folder, or any of your own images</li>
+            <li>Test out some of the different display/interaction options Slick has</li>
+          </ul>
+        </section> -->
 
 
 
+        <section>
+          <h3>Next Steps</h3>
+          <ul>
+            <li class="fragment">Read Up!
+              <ul>
+              <li><a href="http://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647">JavaScript &amp; JQuery by Jon Duckett</a></li>
+              <li><a href="http://api.jquery.com/">JQuery API Documentation</a></li>
+              </ul>
+            </li>
+            <br>
+            <li class="fragment">Practice!
+              <ul><li><a href="http://www.codecademy.com/tracks/jquery">Codeacademy jQuery Track</a></li>
+              <li><a href="http://teamtreehouse.com/library/jquery-basics">Treehouse jQuery Course</a></li>
+              <li><a href="https://www.codeschool.com/courses/try-jquery">Code School jQuery Course</a></li></ul>
+            </li>
+            <br>
+            <li class="fragment">Build Something!
+              <ul><li>FAQ list, gallery, quiz, calculator, or whatever else you can cook up!</li></ul>
+            </li>
+          </ul>
+        </section>
 
-                <section>
-                  <h2>Questions?</h2>
-                  <div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
-                    <div class="clear"></div></div>
-                </section>
-
-                <section>
-                  <h2>Thank You!</h2>
-                  <br>
-                  <h4 class="center">Survey</h4>
-                  <p class="center"><a href="http://bit.ly/gdi-philly-jquery">http://bit.ly/gdi-philly-jquery</a></p>
-                  <br>
-                  <h4 class="center">Get in touch!</h4>
-                  <p class="center"><a href="http://twitter.com/ivanaveliskova">@ivanaveliskova</a></p>
-                  <p class="center">ivanaveliskova@gmail.com</p>
-                </section>
 
 
-                        <!-- Class begins -->
-        				<section>
-        					<h1>GDI Philly</h1>
-        					<h3>Starter Slides</h3>
-        				</section>
-                 <section>
-                    <p>wifi: network</p>
-                    <p>password: password</p>
-                    <h4><br />Early?</h4>
-                    <ul>
-                        <li>any prep instructions</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Welcome!</h3>
-                    <div class="left-align">
-                        <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-                        <p><a href="https://www.girldevelopit.com/code-of-conduct">Our code of conduct</a></p>
-                        <p>Some "rules"</p>
-                        <ul>
-                            <li>We are here for you!</li>
-                            <li>Every question is important</li>
-                            <li>Help each other</li>
-                            <li>Have fun</li>
-                        </ul>
-                    </div>
-                </section>
-                <section>
-                    <h3>GDI Philly is now on Slack!</h3>
-                    <div class="left-align">
-                        <p>Slack is a free, chat and messaging system available as either a web or native application for your desktop or mobile device. All our welcome to join our Slack team, but we need to add you! For an invitation, <a href="http://goo.gl/forms/Qk1hqLxXtU" target="_blank">sign up here</a>.</p>
-                        <h4><br />Join #[slack-room-name] to slack about this class!</h4>
-                    </div>
-                </section>
-                <section>
-                    <h3>Introduce yourself</h3>
-                    <ul>
-                        <li>Who are you?</li>
-                        <li>What do you hope to get out of this class?</li>
-                        <li>[Fun introductory question here. Make it inclusive!]</li>
-                    </ul>
-                </section>
-                <!-- Class content goes here -->
-                <section>
-                    <h3>Let's Develop It</h3>
-                    <p>Task instructions might go here</p>
-                    <p><span class="green">BONUS</span>: Finished early? Try this.</p>
-                    <pre class="fragment"><code contenteditable class="javascript">
-    Code solution might go here
-                    </code></pre>
-                </section>
-                <section>
-                    <h2>Stretch break!</h2>
-                    <img src="img/cat_stretch.jpg" alt="kitty!" />
-                </section>
-                <!-- End of class -->
-                <section>
-                    <h3>Summary</h3>
-                    <ul>
-                        <li>Intro</li>
-                        <li>Exercise</li>
-                        <li>Stretch break</li>
-                        <li>Wrap up</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Homework (optional)</h3>
-                    <ol>
-                        <li>Describe a next-level homework task for students to tackle</li>
-                        <li>Be sure to include solutions to this and all exercises, including bonus items.</li>
-                    </ol>
-                    <p><br />Don't feel you need to finish this right away! Check into #[slack-room-name] for follow-up and questions.</p>
-                </section>
-                <section>
-                    <h3>What next?</h3>
-                    <ol>
-                        <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Suggested_Course_Sequences/" target="_blank">Suggested class sequences</a></li>
-                        <li>Valuable resources</li>
-                        <li>Other upcoming GDI classes/events</li>
-			<li>Write about your class experience, and send us a link! We can share to the Philly community, and maybe GDI national.</li>
-                    </ol>
-                </section>
-                <section>
-                    <h3>Get Involved</h3>
-                    <ol>
-                        <li>Join Slack community</li>
-                        <li>Teaching assist</li>
-                        <li>Teach something</li>
-                        <li>Mentor or be mentored</li>
-                    </ol>
-                    <p><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Get_Involved/" target="_blank">All forms here</a></p>
-                </section>
-                <section>
-                    <h3>Survey</h3>
-                    <p>We value your feedback and are always trying to improve.</p>
-                    <p><a href="" target="_blank">survey link here</a></p>
-                </section>
-			</div>
-  		<footer>
+
+        <section>
+          <h2>Questions?</h2>
+          <div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
+            <div class="clear"></div></div>
+        </section>
+
+        <section>
+          <h2>Thank You!</h2>
+          <br>
+          <h4 class="center">Survey</h4>
+          <p class="center"><a href="http://bit.ly/gdi-philly-jquery">http://bit.ly/gdi-philly-jquery</a></p>
+          <br>
+          <h4 class="center">Get in touch!</h4>
+          <p class="center"><a href="http://twitter.com/ivanaveliskova">@ivanaveliskova</a></p>
+          <p class="center">ivanaveliskova@gmail.com</p>
+        </section>
+
+            </div>
+        <footer>
         <div class="copyright">
-          Intro to jQuery -- Philadelphia --
+          Intro to jQuery ~ Girl Develop It ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
-		</div>
+        </div>
 
 
-    <script src="http://code.jquery.com/jquery-2.2.1.js"></script>;
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.min.js"></script>
 
-		<script>
+        <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+                controls: true,
+                progress: true,
+                history: true,
+                rollingLinks: false,
 
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
 
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true },
-                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
 
-		</script>
+        </script>
 
-	</body>
+    </body>
 </html>

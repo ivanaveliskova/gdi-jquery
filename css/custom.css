@@ -1,0 +1,28 @@
+.left-align {
+    text-align: left;
+}
+
+section.twoColumns p span {
+    width: 78%;
+    float:left;
+    display:block;
+    text-align:left;
+}
+
+section.twoColumns p span.blue {
+    clear: left;
+    width: 22%;
+}
+
+.img-small {
+    width: 250px;
+}
+
+.img-med {
+    width: 500px;
+}
+
+.reveal .short-code {
+    width: 200px;
+    display: inline-block;
+}

@@ -12,7 +12,7 @@
             </answers>
         </question>
         <question>
-            <q>How would you select for elements with a class of "classy"?</q>
+            <q>How would you select elements with a class of "classy"?</q>
             <answers>
                 <a>#classy</a>
                 <a correct="true">.classy</a>
@@ -44,7 +44,7 @@
                 <a>string</a>
                 <a>object</a>
                 <a>array</a>
-                <a>number</a>
+                <a>number/integer</a>
                 <a>boolean</a>
                 <a correct="true">these are all data types</a>
             </answers>
