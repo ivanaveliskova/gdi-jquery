@@ -595,7 +595,7 @@ if ( style.msGrid === '' || style.grid === '' ) {
         </section>
 
         <section>
-          <h3>Why not just css/html?</h3>
+          <h3>Why not just HTML/CSS?</h3>
 
           <div class="fragment">
             <pre><code class="html">&lt;img class="sale-img" src="images/sale.png"&gt;</code></pre>
@@ -603,10 +603,16 @@ if ( style.msGrid === '' || style.grid === '' ) {
             <pre><code class="javascript">var currentTime = new Date().getTime();
 // sets currentTime variable to current unix timestamp like 1428534443
 
-if (currentTime > 1428595627) {
+var endDayBegin = new Date(2017, 4, 23).getTime();
+var endDayEnd = new Date(2017, 4, 23, 23, 59, 59).getTime();
+
+if (currentTime > endDayBegin && currentTime < endDayEnd) {
   $('.sale-img').attr('src', '/images/ends-today.png');
+} else if ( currentTime > endDayEnd ) {
+  $('.sale-img').remove();
 }
-// changes sale image to an 'ends today' version if the time is after 7am on Sunday</code></pre>
+// changes sale image to an 'ends today' version if it's the last day of the sale
+// And removes the image if it's past the day </code></pre>
           </div>
         </section>
 
@@ -614,39 +620,80 @@ if (currentTime > 1428595627) {
           <h3>Looping</h3>
           <p class="fragment">In javascript we wrote an 'if' statement and kept track of the index with a variable.</p>
           <pre class="fragment"><code class="javascript">var listItems = document.getElementsByTagName('li');
-for(var i = 0; i < listItems.length; i++) {
-console.log('This is list item # ' + i);
+for(var index = 0; index < listItems.length; index++) {
+  console.log('This is list item # ' + index);
 }</code></pre>
           <p class="fragment">With jQuery we can use... </p>
-          <p class="fragment">
-          <span class="blue left-align">.each()</span> &mdash; <span> commonly used method to loop through a collection</span> </p>
-          <pre><code class="javascript fragment">$('ul li').each(function(index) {
-console.log('This is list item #' + index);
+          <p class="fragment"><span class="blue left-align">.each()</span> &mdash; <span> commonly used method to loop through a collection</span> </p>
+          <pre class="fragment"><code class="javascript">$('ul li').each(function(index) {
+  console.log('This is list item #' + index);
 });</code></pre>
         </section>
+
+        <!-- <section>
+          <h3>Looping and the Current Element</h3>
+          <div class="left-align">
+            <pre><code class="javascript">$('ul li').each(function(index) {
+  console.log('This is list item #' + index);
+});</code></pre>
+            <p>We can add an additional argument, <code>element</code> inside our function which points to the current element we are on</p>
+            <pre class="fragment"><code class="javascript">var $listItems = $('ul li');
+$listItems.each(function(index, element) {
+  if ( $listItems[index] === element) {
+    console.log('They are exactly the same!');
+  }
+});</code></pre>
+          </div>
+        </section> -->
+
         <section>
           <h3>Index and This</h3>
           <div class="left-align">
             <p class="fragment"><span class="blue">index</span>: the function supplied to "each" is automatically passed the number of the current loop iteration, which will generally match the index of each member of the collection.</p>
             <p class="fragment"><span class="blue">this</span>: "this" is the context of any function. Frequently in jQuery, "this" will refer to the element being pointed to by the iterator.</p>
             <p class="fragment">Other built-in methods are sometimes passed other pertinent data.</p>
+            <p class="fragment"><small>Example coming right up!</small></p>
           </div>
         </section>
 
         <section>
-          <h3>Looping</h3>
-          <p class="fragment">Use 'this' as an iterator:</p>
+          <h3>And now a word from one of our sponsers*:</h3>
+          <h3 class="fragment"><strong>this</strong></h3>
+          <p class="fragment">"used to indicate a person, thing, idea, state, event, time, remark, etc., as present, near, just mentioned or pointed out&hellip;" &mdash; <a href="http://www.dictionary.com/browse/this">Dictionary.com</a></p>
+          <h3 class="fragment">Thank you</h3>
+          <p><small>*Not really a sponsor.</small></p>
+          <p class="fragment"><small>Now back to your regularly scheduled programming.</small></p>
+        </section>
 
-          <pre><code class="javascript fragment">$('ul li').each(function() {
-$(this).append('!');
+        <section>
+          <h3>Looping</h3>
+          <p class="fragment">Using 'this' as an iterator:</p>
+          <pre class="fragment"><code class="javascript">$('ul li').each(function() {
+  $(this).append('!');
 });</code></pre>
           <br>
           <p class="fragment">To be more efficient, cache a variable for $(this):</p>
-          <pre><code class="javascript fragment">$('ul li').each(function() {
-var $this = $(this);
+          <pre class="fragment"><code class="javascript">$('ul li').each(function() {
+var $self = $(this);
 $this.append('!');
 });</code></pre>
         </section>
+
+        <section>
+          <h3>One more note from another one of our sponsers:</h3>
+          <h3 class="fragment"><strong>Storing Variables</strong></h3>
+          <pre class="fragment"><code class="javascript">$('#someID').append('!');
+$('#someID').css('color', 'green');</code></pre>
+          <p class="fragment">This will ask jQuery to rescan for the matching element, wrap it in a jQuery object, and create a new instance of something you already have in memory.</p>
+          <pre class="fragment"><code class="javascript">$someVarName = $('#someID');
+$someVarName.append('!');
+$someVarName.css('color', 'green');</code></pre>
+          <p class="fragment">This will allow you to cache your elements and refer to them when needed. Saving memory!</p>
+          <h3 class="fragment">Thank you</h3>
+          <p class="fragment"><small>Now back to your regularly scheduled programming.</small></p>
+        </section>
+
+
         <section>
           <h3>Let's Develop It!</h3>
           <br>
@@ -663,6 +710,13 @@ $this.append('!');
           </div>
         </section>
 
+        <!-- Any time is the best time for a break time. -->
+
+        <section>
+            <h2>Stretch break!</h2>
+            <img src="img/cat_stretch.jpg" alt="kitty!" />
+        </section>
+
         <!-- Interaction -->
         <section>
           <h3>Interaction</h3>
@@ -672,7 +726,7 @@ $this.append('!');
         </section>
         <section>
           <h3>Events</h3>
-          <br>
+          <p>When something happens</p>
           <ul>
             <li class="fragment">click</li>
             <li class="fragment">mouseenter / leave (hover)</li>
@@ -684,21 +738,24 @@ $this.append('!');
 
         <section>
           <h3>Interaction</h3>
+          <p>When I do this thing, it will respond somehow</p>
           <ul>
             <li class="fragment">Most events happen via the <a href="http://api.jquery.com/on/">.on()</a> method, which usually takes two args.</li>
             <li class="fragment">The first argument is the event (or events), passed in as a string</li>
             <li class="fragment">The second argument is a function that will run when the event happens, called an event handler</li>
-            <pre class="fragment"><code class="javascript">$('button').on('click', function() {
-console.log('the button was clicked!');
+          </ul>
+          <pre class="fragment"><code class="javascript">$('#button').on('click', function() {
+  console.log('The button was clicked!');
 });</code></pre>
+          <button id="button" class="button-styled fragment">Button</button>
         </section>
 
         <section>
           <h3>Binding handlers</h3>
           <p>You can also...</p>
           <pre class="fragment"><code class="javascript">$('a').on('click', function (event) {
-event.preventDefault();
-console.log('Not going there!');
+  event.preventDefault();
+  console.log('Not going there!');
 });</code></pre>
           <p class="fragment">Event handlers are typically passed the event that has triggered them, and that data can then be used by the handler. See info on the event object: <a href="http://api.jquery.com/category/events/event-object/">http://api.jquery.com/category/events/event-object/</a></p>
         </section>
@@ -707,16 +764,18 @@ console.log('Not going there!');
           <h3>Binding handlers</h3>
           <p class="fragment">You can also use the "on" method to bind to multiple events at once:</p>
           <pre class="fragment"><code class="javascript">$('.overlay').on('click touchstart', function() {
-$this.fadeToggle('slow');
+  $(this).fadeToggle('slow');
 });</code></pre>
           <pre class="fragment"><code class="javascript">$('.sidebar').on({
-click: function() {
-  $(this).toggleClass('active');
-}, focusin: function() {
-  $(this).addClass('inside');
-}, focusout: function() {
-  $(this).removeClass('inside');
-}
+  click: function() {
+    $(this).toggleClass('active');
+  },
+  focusin: function() {
+    $(this).addClass('inside');
+  },
+  focusout: function() {
+    $(this).removeClass('inside');
+  }
 });</code></pre>
         </section>
 
@@ -727,7 +786,7 @@ click: function() {
             <ul>
               <li>Add console logs on mouseenter/mouseleave for the hero image</li>
               <li>Add some text underneath the button when it's clicked</li>
-              <li>Toggle the menu to show and hide on click. (Inspect the DOM to figure out which elements we should be selecting and showing.)</li>
+              <li>Toggle the hamburger menu to show and hide on click. (Inspect the DOM to figure out which elements should have the event happen to and which should be handled.)</li>
             </ul>
             <br/>
             <br/>
@@ -738,11 +797,12 @@ click: function() {
           <h3>Document Readiness</h3>
           <p class="fragment blue">A break in our regularly scheduled program</p>
           <p class="fragment">Most everything you want to do with jQuery requires the DOM to be fully loaded.</p>
+          <p class="fragment">Sometimes jQuery will try to load and hook onto elements that don't exist yet.</p>
           <p class="fragment">The browser renders the markup from top to bottom, then triggers a DOMReady event.</p>
           <pre class="fragment"><code class="javascript">$(document).ready(function() {
   // Handler for .ready() called.
 });</code></pre>
-          <p class="fragment">Or you can put you javascript at the bottom of the document</p>
+          <p class="fragment">This waits for the DOM to be fully loaded and does a check if it is loaded before any JavaScript/jQuery is run.</p>
         </section>
 
         <section>
@@ -766,204 +826,117 @@ click: function() {
           <h3>Custom Animation</h3>
           <p class="blue">.animate( properties [, duration ] [, easing ] [, complete ] );</p>
           <pre><code class="javascript">$('p.special').animate(
-{height:'500',fontSize:'3em'},
-4000,
-'linear',
-function(){
-  alert('done!');
-}
+  {opacity: 0.25, fontSize:'3em'},
+  4000,
+  'linear',
+  function(){
+    alert('done!');
+  }
 );</code></pre>
+
+          <p class="special">I'm a special paragraph!</p>
         </section>
 
-                <section>
-                  <h3>Try it together!</h3>
-                  <p>When hovering a gallery image: hide, show, or animate the overlay info.</p>
-                  <pre class="fragment"><code class="javascript">$('.gallery li').each(function() {
-  var $thisImage = $(this);
-  $thisImage.on('mouseenter mouseleave', function() {
-    $thisImage.find('.overlay').fadeToggle('fast');
-  });
+        <section>
+          <h3>Try it together!</h3>
+          <p>When hovering a gallery image: hide, show, or animate the overlay info.</p>
+          <pre class="fragment"><code class="javascript">$('.gallery li').on('mouseenter mouseleave', function() {
+  $(this).find('.overlay').fadeToggle('fast');
 });</code></pre>
-                  <ul>
-                    <li class="fragment">Be mindful of what a user will see without javascript</li>
-                    <li class="fragment">A lot of these features are possible through CSS3, but jQuery is supported on older browsers</li>
-                    <li class="fragment">Also, jQuery allows you to trigger effects on elements other than the one being interacted with</li>
-                  </ul>
-                </section>
+          <ul>
+            <li class="fragment">Be mindful of what a user will see without JavaScript</li>
+            <li class="fragment">A lot of these features are possible through CSS3, but jQuery is supported on older browsers</li>
+            <li class="fragment">Also, jQuery allows you to trigger effects on elements other than the one being interacted with</li>
+          </ul>
+        </section>
 
-                <!-- Bonus Content -->
-                <!-- <section>
-                  <h3>jQuery UI &amp; Plugins</h3>
-                  <ul>
-                    <li>jQuery UI offers more advanced interaction methods. It's very well documented, but can be heavy on pageload. <a href="http://jqueryui.com/download/" target="_blank">Only load in pieces you need!</a></li>
-                    <br>
-                    <li>jQuery is open source and widely used, so there are many many plugins available (of varying quality and levels of documentation)
-                    <ul><li>date pickers, slideshows, accordions, much more!</li></ul></li>
-                  </ul>
-                  <br>
-                  <br>
-                  <p class="center"><a href="http://plugins.jquery.com/">http://plugins.jquery.com/</a></p>
-                </section>
-                <section>
-                  <h3>Using Plugins</h3>
-                  <ul>
-                    <li>Download the plugin and associated files from the site or github repo</li>
-                    <li>Copy them into your project folder</li>
-                    <li>In the HTML, reference any associated CSS files</li>
-                    <li>In the HTML, add a script tag for the jQuery plugin itself</li>
-                    <li>In the JavaScript, call the jQuery plugin on your DOM</li>
-                </section>
-                <section>
-                  <h3>Let's Develop It!</h3>
-                  <p>Add a slideshow using <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick.js</a>!</p>
-                  <ul>
-                    <li>Use any of the images in the demo-files image folder, or any of your own images</li>
-                    <li>Test out some of the different display/interaction options Slick has</li>
-                  </ul>
-                </section> -->
-
-
-
-                <section>
-                  <h3>Next Steps</h3>
-                  <ul>
-                    <li class="fragment">Read Up!
-                      <ul>
-                      <li><a href="http://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647">JavaScript &amp; JQuery by Jon Duckett</a></li>
-                      <li><a href="http://api.jquery.com/">JQuery API Documentation</a></li>
-                      </ul>
-                    </li>
-                    <br>
-                    <li class="fragment">Practice!
-                      <ul><li><a href="http://www.codecademy.com/tracks/jquery">Codeacademy jQuery Track</a></li>
-                      <li><a href="http://teamtreehouse.com/library/jquery-basics">Treehouse jQuery Course</a></li>
-                      <li><a href="https://www.codeschool.com/courses/try-jquery">Code School jQuery Course</a></li></ul>
-                    </li>
-                    <br>
-                    <li class="fragment">Build Something!
-                      <ul><li>FAQ list, gallery, quiz, calculator, or whatever else you can cook up!</li></ul>
-                    </li>
-                  </ul>
-                </section>
+        <!-- Bonus Content -->
+        <!-- <section>
+          <h3>jQuery UI &amp; Plugins</h3>
+          <ul>
+            <li>jQuery UI offers more advanced interaction methods. It's very well documented, but can be heavy on pageload. <a href="http://jqueryui.com/download/" target="_blank">Only load in pieces you need!</a></li>
+            <br>
+            <li>jQuery is open source and widely used, so there are many many plugins available (of varying quality and levels of documentation)
+            <ul><li>date pickers, slideshows, accordions, much more!</li></ul></li>
+          </ul>
+          <br>
+          <br>
+          <p class="center"><a href="http://plugins.jquery.com/">http://plugins.jquery.com/</a></p>
+        </section>
+        <section>
+          <h3>Using Plugins</h3>
+          <ul>
+            <li>Download the plugin and associated files from the site or github repo</li>
+            <li>Copy them into your project folder</li>
+            <li>In the HTML, reference any associated CSS files</li>
+            <li>In the HTML, add a script tag for the jQuery plugin itself after your call to jQuery</li>
+            <li>In the JavaScript, call the jQuery plugin on your DOM</li>
+        </section>
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Add a slideshow using <a href="http://kenwheeler.github.io/slick/" target="_blank">Slick.js</a>!</p>
+          <ul>
+            <li>Use any of the images in the demo-files image folder, or any of your own images</li>
+            <li>Test out some of the different display/interaction options Slick has</li>
+          </ul>
+        </section> -->
+        <!-- End Bonus Content -->
 
 
+        <section>
+          <h3>Next Steps</h3>
+          <ul class="fragment">
+            <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Suggested_Course_Sequences/" target="_blank">Suggested class sequences</a></li>
+            <li>Read Up!
+              <ul>
+              <li><a href="http://www.amazon.com/JavaScript-JQuery-Interactive-Front-End-Development/dp/1118531647">JavaScript &amp; jQuery by Jon Duckett</a></li>
+              <li><a href="http://api.jquery.com/">jQuery API Documentation</a></li>
+              </ul>
+            </li>
+            <li>Practice!
+              <ul>
+                <li><a href="http://www.codecademy.com/tracks/jquery">Codeacademy jQuery Track</a></li>
+                <li><a href="http://teamtreehouse.com/library/jquery-basics">Treehouse jQuery Course</a></li>
+                <li><a href="https://www.codeschool.com/courses/try-jquery">Code School jQuery Course</a></li>
+              </ul>
+            </li>
+            <li>Build Something!
+              <ul><li>FAQ list, gallery, quiz, calculator, or whatever else you can cook up!</li></ul>
+            </li>
+            <!-- <li>Other upcoming GDI classes/events</li> -->
+      			<li>Write about your class experience, and send us a link! We can share to the Philly community, and maybe GDI national.</li>
+          </ul>
+        </section>
 
+        <section>
+          <h2>Questions?</h2>
+          <div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
+            <div class="clear"></div></div>
+        </section>
 
-                <section>
-                  <h2>Questions?</h2>
-                  <div style="font-size:1200%; height:100%; margin-top:30%" class="blue">?
-                    <div class="clear"></div></div>
-                </section>
+        <section>
+            <h3>Get Involved</h3>
+            <ol>
+                <li>Join Slack community</li>
+                <li>Teaching assist</li>
+                <li>Teach something</li>
+                <li>Mentor or be mentored</li>
+            </ol>
+            <p><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Get_Involved/" target="_blank">All forms here</a></p>
+        </section>
 
-                <section>
-                  <h2>Thank You!</h2>
-                  <br>
-                  <h4 class="center">Survey</h4>
-                  <p class="center"><a href="http://bit.ly/gdi-philly-jquery">http://bit.ly/gdi-philly-jquery</a></p>
-                  <br>
-                  <h4 class="center">Get in touch!</h4>
-                  <p class="center"><a href="http://twitter.com/ivanaveliskova">@ivanaveliskova</a></p>
-                  <p class="center">ivanaveliskova@gmail.com</p>
-                </section>
+        <section>
+          <h2>Thank You!</h2>
+          <br>
+          <h4 class="center">Survey</h4>
+          <p>We value your feedback and are always trying to improve.</p>
+          <!-- <p class="center"><a href="http://bit.ly/gdi-philly-jquery">http://bit.ly/gdi-philly-jquery</a></p> -->
+          <br>
+          <h4>Get in touch!</h4>
+          <p ><a href="http://twitter.com/ivanaveliskova">@ivanaveliskova</a></p>
+          <p>ivanaveliskova@gmail.com</p>
+        </section>
 
-
-                        <!-- Class begins -->
-        				<section>
-        					<h1>GDI Philly</h1>
-        					<h3>Starter Slides</h3>
-        				</section>
-                 <section>
-                    <p>wifi: network</p>
-                    <p>password: password</p>
-                    <h4><br />Early?</h4>
-                    <ul>
-                        <li>any prep instructions</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Welcome!</h3>
-                    <div class="left-align">
-                        <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-                        <p><a href="https://www.girldevelopit.com/code-of-conduct">Our code of conduct</a></p>
-                        <p>Some "rules"</p>
-                        <ul>
-                            <li>We are here for you!</li>
-                            <li>Every question is important</li>
-                            <li>Help each other</li>
-                            <li>Have fun</li>
-                        </ul>
-                    </div>
-                </section>
-                <section>
-                    <h3>GDI Philly is now on Slack!</h3>
-                    <div class="left-align">
-                        <p>Slack is a free, chat and messaging system available as either a web or native application for your desktop or mobile device. All our welcome to join our Slack team, but we need to add you! For an invitation, <a href="http://goo.gl/forms/Qk1hqLxXtU" target="_blank">sign up here</a>.</p>
-                        <h4><br />Join #[slack-room-name] to slack about this class!</h4>
-                    </div>
-                </section>
-                <section>
-                    <h3>Introduce yourself</h3>
-                    <ul>
-                        <li>Who are you?</li>
-                        <li>What do you hope to get out of this class?</li>
-                        <li>[Fun introductory question here. Make it inclusive!]</li>
-                    </ul>
-                </section>
-                <!-- Class content goes here -->
-                <section>
-                    <h3>Let's Develop It</h3>
-                    <p>Task instructions might go here</p>
-                    <p><span class="green">BONUS</span>: Finished early? Try this.</p>
-                    <pre class="fragment"><code contenteditable class="javascript">
-    Code solution might go here
-                    </code></pre>
-                </section>
-                <section>
-                    <h2>Stretch break!</h2>
-                    <img src="img/cat_stretch.jpg" alt="kitty!" />
-                </section>
-                <!-- End of class -->
-                <section>
-                    <h3>Summary</h3>
-                    <ul>
-                        <li>Intro</li>
-                        <li>Exercise</li>
-                        <li>Stretch break</li>
-                        <li>Wrap up</li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Homework (optional)</h3>
-                    <ol>
-                        <li>Describe a next-level homework task for students to tackle</li>
-                        <li>Be sure to include solutions to this and all exercises, including bonus items.</li>
-                    </ol>
-                    <p><br />Don't feel you need to finish this right away! Check into #[slack-room-name] for follow-up and questions.</p>
-                </section>
-                <section>
-                    <h3>What next?</h3>
-                    <ol>
-                        <li><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Suggested_Course_Sequences/" target="_blank">Suggested class sequences</a></li>
-                        <li>Valuable resources</li>
-                        <li>Other upcoming GDI classes/events</li>
-			<li>Write about your class experience, and send us a link! We can share to the Philly community, and maybe GDI national.</li>
-                    </ol>
-                </section>
-                <section>
-                    <h3>Get Involved</h3>
-                    <ol>
-                        <li>Join Slack community</li>
-                        <li>Teaching assist</li>
-                        <li>Teach something</li>
-                        <li>Mentor or be mentored</li>
-                    </ol>
-                    <p><a href="http://www.meetup.com/Girl-Develop-It-Philadelphia/pages/Get_Involved/" target="_blank">All forms here</a></p>
-                </section>
-                <section>
-                    <h3>Survey</h3>
-                    <p>We value your feedback and are always trying to improve.</p>
-                    <p><a href="" target="_blank">survey link here</a></p>
-                </section>
 			</div>
   		<footer>
         <div class="copyright">
@@ -977,6 +950,7 @@ function(){
     <script src="http://code.jquery.com/jquery-2.2.1.js"></script>;
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+
 
 		<script>
 

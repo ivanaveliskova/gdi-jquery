@@ -26,3 +26,20 @@ section.twoColumns p span.blue {
     width: 200px;
     display: inline-block;
 }
+
+.button-styled {
+    color: #f05b62;
+    font-size: 30px;
+    text-transform: uppercase;
+    background: transparent;
+    border: 3px solid #f05b62;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button-styled:hover {
+    background: #f05b62;
+    color: white;
+}

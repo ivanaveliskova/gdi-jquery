@@ -146,6 +146,7 @@
 // Have the text appear and disappear when the button is clicked    //
 //////////////////////////////////////////////////////////////////////
 
+// Solution 1
 // $('.button-container button').on('click', function(event) {
 //     var $this = $(this);
 //     event.preventDefault();
@@ -156,6 +157,28 @@
 //     }
 // });
 
+// Solution 2
+// var textIsThere = false,
+//     textExists = false;
+
+// $('.button-container button').on('click', function(event) {
+//     // Cache our elements
+//     var $this = $(this),
+//         $textNode = $this.siblings('p') || ''; // This checks if the element even exists on the page, if it doesn't then makes an empty string, if it does stores the element in the variable.
+//     event.preventDefault();
+
+//     if (textExists && textIsThere) {
+//         $textNode.hide();
+//         textIsThere = false;
+//     } else if (!textIsThere && textExists) {
+//         $textNode.show();
+//         textIsThere = true;
+//     } else {
+//         $this.parent().append('<p>Button was pressed.</p>');
+//         textIsThere = true;
+//         textExists = true;
+//     }
+// });
 
 
 
