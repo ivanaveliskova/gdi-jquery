@@ -43,3 +43,7 @@ section.twoColumns p span.blue {
     background: #f05b62;
     color: white;
 }
+
+.list-style-none {
+    list-style: none;
+}
