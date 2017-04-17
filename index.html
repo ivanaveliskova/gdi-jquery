@@ -96,7 +96,7 @@
             <li>This class will be a combo of lecture + exercises</li>
             <li>It is 4 hours long, with a 30 minute break in the middle</li>
             <li>Agenda
-                <ul id="table-of-contents">
+                <ul>
                   <li>Introductions</li>
                   <li>Quick review of JavaScript</li>
                   <li>JQuery overview</li>
@@ -252,8 +252,8 @@ while(i < 10) {
         <section data-slide=''>
           <h3>JavaScript Review</h3>
           <div class="left-align">
-            <p class="blue">Traversing the DOM</p>
-            <pre class="fragment"><code class="javascript">document.getElementById('table-of-contents');
+            <p class="blue" id="above-paragraph">Traversing the DOM</p>
+            <pre class="fragment"><code class="javascript">document.getElementById('above-paragraph');
 // Finds an element in the DOM by ID
 // will return first one that matches (there should only be 1)</code></pre>
             <pre class="fragment"><code class="javascript">document.getElementsByClassName('past');
