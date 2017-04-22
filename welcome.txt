@@ -12,14 +12,42 @@
 
 -----
 
-Hello $CLASS_NAME students!
+Hey Intro to jQuery Students!
 
-Our class is coming up soon: $DATE_AND_TIME. We'll be at $VENUE_DETAILS.
+I'm super excited for us to do some jQuery on Sunday and I hope you are too!
 
-You should bring $LAPTOP_AND_HARDWARE with $BROWSERS_OR_SOFTWARE installed.
+Here is some notes for you to be ready for our class coming up this Sunday, April 23, 2017, at 12:45pm.
 
-Before class, please $COURSE_PREREQUISITES_AND_HOMEWORK.
+Bring:
 
-If you have any questions, feel free to post them in the comments, or click on my profile and message me directly.
+Laptop
+Charger
+Potentially any food, snacks or drinks (we will have a 20-30 minute break in the middle if you need to get yourself a pick-me-up)
+Pre-prep:
 
-$FRIENDLY_CLOSING
+Please have downloaded onto your computer
+
+Sublime Text 3 or Atom (I will be using Sublime if you feel it will help you to follow along more closely)
+Chrome or Firefox (I will be using Chrome if it helps you to follow along closely)
+Download the practice files here and unzip them and place them somewhere that you can easily find them (like your desktop!).
+The slides are available here. I might be updating the slides up until the beginning of class, so you might just need to hit refresh when you get there.
+
+Come with questions! Get pumped! Whoo!
+
+We will be at First Round Capital!
+
+That is located at 4040 Locust St. Since it is a Sunday, there is available on street parking all along Locust and the surrounding areas, but you should still double check the signs because you never know what sort of construction might be happening.
+
+Here is a map link to where we will be:
+
+https://maps.google.com/maps?q=4040+Locust+Street,+Philadelphia,+PA
+
+Someone should be at the door to let you in if it is locked.
+
+ 
+
+If you have any questions before class feel free to hit respond and email me! I will try to get back to you promptly.
+
+Cheers,
+
+Ivana and the GDI Philly Team
