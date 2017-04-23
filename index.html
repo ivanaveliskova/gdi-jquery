@@ -629,7 +629,7 @@ if (currentTime > endDayBegin && currentTime < endDayEnd) {
 
         <section>
           <h3>Looping</h3>
-          <p class="fragment">In javascript we wrote an 'if' statement and kept track of the index with a variable.</p>
+          <p class="fragment">In javascript we wrote a 'for' statement and kept track of the index with a variable.</p>
           <pre class="fragment"><code class="javascript">var listItems = document.getElementsByTagName('li');
 for(var index = 0; index < listItems.length; index++) {
   console.log('This is list item # ' + index);
@@ -685,8 +685,8 @@ $listItems.each(function(index, element) {
           <br>
           <p class="fragment">To be more efficient, cache a variable for $(this):</p>
           <pre class="fragment"><code class="javascript">$('ul li').each(function() {
-var $self = $(this);
-$this.append('!');
+  var $self = $(this);
+  $self.append('!');
 });</code></pre>
         </section>
 
