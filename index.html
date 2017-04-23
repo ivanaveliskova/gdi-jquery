@@ -191,17 +191,15 @@ if (total >= 100) {
           <div class="left-align">
             <p class="blue">Combining Conditionals and Looping (<a href="https://en.wikipedia.org/wiki/Fizz_buzz">FizzBuzz</a>)</p>
             <pre class="fragment"><code class="javascript">for(var i = 1; i <= 100; i++) {
-  var print = '';
+  var print;
 
-  if ((i % 3) === 0) {
-    print += 'Fizz';
-  }
-
-  if ((i % 5) === 0) {
-    print += 'Buzz';
-  }
-
-  if(print === '') {
+  if ((i % 5) === 0 &amp;&amp; (i % 3) === 0) {
+    print = 'FizzBuzz';
+  } else if ((i % 3) === 0) {
+    print = 'Fizz';
+  } else if ((i % 5) === 0) {
+    print = 'Buzz';
+  } else {
     print = i;
   }
 
